@@ -3,6 +3,7 @@ name: Refresh Configurations
 on:
   schedule:
     - cron: '00 01 * * *'
+  workflow_dispatch:
 
 jobs:
   nightly:
