@@ -7,9 +7,9 @@ CARDANO_NETWORK=$2
 
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-topology.json -O network/$CARDANO_NETWORK/cardano-node/topology.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-config.json -O network/$CARDANO_NETWORK/cardano-node/config.json
-sed -i 's@\("ByronGenesisFile"\):.*$@\1: "../genesis/byron.json",@' network/$CARDANO_NETWORK/cardano-node.config.json
-sed -i 's@\("ShelleyGenesisFile"\):.*$@\1: "../genesis/shelley.json",@' network/$CARDANO_NETWORK/cardano-node.config.json
-sed -i 's@\("AlonzoGenesisFile"\):.*$@\1: "../genesis/alonzo.json",@' network/$CARDANO_NETWORK/cardano-node.config.json
+sed -i 's@\("ByronGenesisFile"\):.*$@\1: "../genesis/byron.json",@' network/$CARDANO_NETWORK/cardano-node/config.json
+sed -i 's@\("ShelleyGenesisFile"\):.*$@\1: "../genesis/shelley.json",@' network/$CARDANO_NETWORK/cardano-node/config.json
+sed -i 's@\("AlonzoGenesisFile"\):.*$@\1: "../genesis/alonzo.json",@' network/$CARDANO_NETWORK/cardano-node/config.json
 
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-byron-genesis.json -O network/$CARDANO_NETWORK/genesis/byron.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-shelley-genesis.json -O network/$CARDANO_NETWORK/genesis/shelley.json
