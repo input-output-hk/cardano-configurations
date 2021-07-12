@@ -5,6 +5,11 @@
 CARDANO_CONFIG_URL=$1
 CARDANO_NETWORK=$2
 
+mkdir -p \
+  network/$CARDANO_NETWORK/cardano-node \
+  network/$CARDANO_NETWORK/genesis \
+  network/$CARDANO_NETWORK/cardano-db-sync
+  
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-topology.json -O network/$CARDANO_NETWORK/cardano-node/topology.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK-config.json -O network/$CARDANO_NETWORK/cardano-node/config.json
 sed -i 's@\("ByronGenesisFile"\):.*$@\1: "../genesis/byron.json",@' network/$CARDANO_NETWORK/cardano-node/config.json
