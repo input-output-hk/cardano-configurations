@@ -36,6 +36,30 @@ jobs:
         CARDANO_CONFIG_URL: ${{ steps.latest.outputs.url }}
         CARDANO_NETWORK: testnet
 
+    - name: Download from Hydra (staging)
+      shell: bash
+      run: |
+        .github/scripts/download-all.sh $CARDANO_CONFIG_URL $CARDANO_NETWORK
+      env:
+        CARDANO_CONFIG_URL: ${{ steps.latest.outputs.url }}
+        CARDANO_NETWORK: staging
+
+    - name: Download from Hydra (shelley_qa)
+      shell: bash
+      run: |
+        .github/scripts/download-all.sh $CARDANO_CONFIG_URL $CARDANO_NETWORK
+      env:
+        CARDANO_CONFIG_URL: ${{ steps.latest.outputs.url }}
+        CARDANO_NETWORK: shelley_qa
+
+    - name: Download from Hydra (alonzo-qa)
+      shell: bash
+      run: |
+        .github/scripts/download-all.sh $CARDANO_CONFIG_URL $CARDANO_NETWORK
+      env:
+        CARDANO_CONFIG_URL: ${{ steps.latest.outputs.url }}
+        CARDANO_NETWORK: alonzo-qa
+
     - name: Download from Hydra (alonzo-white)
       shell: bash
       run: |
