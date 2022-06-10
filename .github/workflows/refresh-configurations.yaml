@@ -41,3 +41,5 @@ jobs:
       shell: bash
       run: |
         .github/scripts/update-when-new.sh $CARDANO_CONFIG_URL
+      env:
+        CARDANO_CONFIG_URL: https://book.world.dev.cardano.org/environments
