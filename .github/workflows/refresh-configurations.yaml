@@ -29,6 +29,14 @@ jobs:
         CARDANO_CONFIG_URL: https://book.world.dev.cardano.org/environments
         CARDANO_NETWORK: testnet
 
+    - name: Download from The Cardano Book (vasil-dev)
+      shell: bash
+      run: |
+        .github/scripts/download-all.sh $CARDANO_CONFIG_URL $CARDANO_NETWORK
+      env:
+        CARDANO_CONFIG_URL: https://book.world.dev.cardano.org/environments
+        CARDANO_NETWORK: vasil-dev
+
     - name: Download from The Cardano Book (vasil-qa)
       shell: bash
       run: |
