@@ -5,7 +5,7 @@
   "ApplicationVersion": 0,
   "ByronGenesisFile": "../genesis/byron.json",
   "ByronGenesisHash": "72593f260b66f26bef4fc50b38a8f24d3d3633ad2e854eaf73039eb9402706f1",
-  "EnableP2P": false,
+  "EnableP2P": true,
   "LastKnownBlockVersion-Alt": 0,
   "LastKnownBlockVersion-Major": 3,
   "LastKnownBlockVersion-Minor": 1,
