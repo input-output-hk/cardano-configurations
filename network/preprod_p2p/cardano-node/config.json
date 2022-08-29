@@ -17,6 +17,7 @@
   "TargetNumberOfEstablishedPeers": 50,
   "TargetNumberOfKnownPeers": 100,
   "TargetNumberOfRootPeers": 100,
+  "TestEnableDevelopmentNetworkProtocols": true,
   "TraceAcceptPolicy": true,
   "TraceBlockFetchClient": false,
   "TraceBlockFetchDecisions": false,
