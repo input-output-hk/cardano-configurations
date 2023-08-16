@@ -24,7 +24,7 @@ wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/conway-genesis.json -O network/$CAR
 
 if [ $(echo $SOURCE_TOPOLOGY | jq 'has("publicRoots")') = true ];
 then
-  ACCESS_POINT=$(echo $SOURCE_TOPOLOGY | jq '.publicRoots.accessPoints[0]')
+  ACCESS_POINT=$(echo $SOURCE_TOPOLOGY | jq '.publicRoots[0].accessPoints[0]')
 
   # Add separate p2p config
   mkdir -p \
