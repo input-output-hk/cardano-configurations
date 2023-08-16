@@ -22,9 +22,9 @@ wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/shelley-genesis.json -O network/$CA
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/alonzo-genesis.json -O network/$CARDANO_NETWORK/genesis/alonzo.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/conway-genesis.json -O network/$CARDANO_NETWORK/genesis/conway.json
 
-if [ $(echo $SOURCE_TOPOLOGY | jq 'has("PublicRoots")') = true ];
+if [ $(echo $SOURCE_TOPOLOGY | jq 'has("publicRoots")') = true ];
 then
-  ACCESS_POINT=$(echo $SOURCE_TOPOLOGY | jq '.PublicRoots[0].publicRoots.accessPoints[0]')
+  ACCESS_POINT=$(echo $SOURCE_TOPOLOGY | jq '.publicRoots.accessPoints[0]')
 
   # Add separate p2p config
   mkdir -p \
