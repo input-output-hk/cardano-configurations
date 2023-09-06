@@ -48,6 +48,7 @@ jobs:
     - name: Push new configurations
       shell: bash
       run: |
+        git status -s
         .github/scripts/update-when-new.sh $CARDANO_CONFIG_URL
       env:
         CARDANO_CONFIG_URL: https://book.world.dev.cardano.org/environments
