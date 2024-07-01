@@ -25,4 +25,6 @@ wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/submit-api-config.json -O network/$
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/byron-genesis.json -O network/$CARDANO_NETWORK/genesis/byron.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/shelley-genesis.json -O network/$CARDANO_NETWORK/genesis/shelley.json
 wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/alonzo-genesis.json -O network/$CARDANO_NETWORK/genesis/alonzo.json
-wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/conway-genesis.json -O network/$CARDANO_NETWORK/genesis/conway.json
+if wget --spider $CARDANO_CONFIG_URL/$CARDANO_NETWORK/conway-genesis.json 2>/dev/null; then
+  wget -q $CARDANO_CONFIG_URL/$CARDANO_NETWORK/conway-genesis.json -O network/$CARDANO_NETWORK/genesis/conway.json
+fi
