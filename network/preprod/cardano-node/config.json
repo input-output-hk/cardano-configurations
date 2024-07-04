@@ -102,6 +102,5 @@
       "scName": "stdout",
       "scRotation": null
     }
-  ],
-  "ConwayGenesisFile": "../genesis/conway.json"
+  ]
 }
