@@ -1,5 +1,5 @@
 {
-  "EnableFutureGenesis": false,
+  "EnableFutureGenesis": true,
   "EnableLogMetrics": false,
   "EnableLogging": true,
   "NetworkName": "preprod",
